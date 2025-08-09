@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=3 uid="uid://d15xasu6atyf5"]
+
+[ext_resource type="Texture2D" uid="uid://1b8rcngpg72g" path="res://ItemArea.png" id="1_e2o6t"]
+[ext_resource type="Texture2D" uid="uid://04uf47ubqfuj" path="res://item.png" id="2_feb5d"]
+[ext_resource type="Script" uid="uid://csdm5f14jeucw" path="res://itemDrag.gd" id="3_fc0e3"]
+[ext_resource type="PackedScene" uid="uid://b78v5h2n1wo6a" path="res://level_1.tscn" id="3_feb5d"]
+
+[node name="Game" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ItemArea" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 3.0
+offset_top = 500.0
+offset_right = 1147.0
+offset_bottom = 632.0
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/ItemArea"]
+layout_mode = 0
+offset_right = 1148.0
+offset_bottom = 142.0
+texture = ExtResource("1_e2o6t")
+expand_mode = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/ItemArea"]
+layout_mode = 0
+offset_left = 358.0
+offset_top = 41.0
+offset_right = 1095.0
+offset_bottom = 122.0
+
+[node name="Item1" type="TextureRect" parent="CanvasLayer/ItemArea/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_feb5d")
+expand_mode = 2
+script = ExtResource("3_fc0e3")
+
+[node name="Item2" type="TextureRect" parent="CanvasLayer/ItemArea/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_feb5d")
+expand_mode = 2
+
+[node name="Item3" type="TextureRect" parent="CanvasLayer/ItemArea/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_feb5d")
+expand_mode = 2
+
+[node name="Item4" type="TextureRect" parent="CanvasLayer/ItemArea/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_feb5d")
+expand_mode = 2
+
+[node name="Level1" parent="." instance=ExtResource("3_feb5d")]
