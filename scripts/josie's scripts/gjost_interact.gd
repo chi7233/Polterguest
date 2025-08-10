@@ -77,7 +77,7 @@ func _process(delta: float) -> void:
 								continue
 							elif item_name.text == x.Name:
 								text.visible = true
-								text.get_node("MarginContiner/MarginContainer/HBoxContainer/Label").text = x.HintText
+								text.get_node("MarginContiner/MarginContainer/Control/HBoxContainer/Label").text = x.HintText
 								print(x.HintText)
 							else:
 								text.visible = 1; 

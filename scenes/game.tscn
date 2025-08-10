@@ -19,7 +19,7 @@
 [ext_resource type="Script" uid="uid://do8wjf3j5n7am" path="res://scripts/josie's scripts/gjost_interact.gd" id="17_ssvqc"]
 [ext_resource type="Texture2D" uid="uid://cg3mnfmr432x" path="res://assets/Assets 1/Assets 1/Grandpa Bubble.png" id="18_ssvqc"]
 [ext_resource type="Texture2D" uid="uid://omkb0wtwl6yx" path="res://assets/Assets 1/Assets 1/Slot 1 Hint.png" id="19_1kice"]
-[ext_resource type="Script" uid="uid://bpld4c3n3e8ad" path="res://scenes/player_characaterization.gd" id="19_264po"]
+[ext_resource type="Script" path="res://scenes/player_characaterization.gd" id="19_264po"]
 
 [node name="Game" type="Node2D"]
 
@@ -227,7 +227,7 @@ script = ExtResource("17_ssvqc")
 [node name="TextBox" type="CanvasLayer" parent="Sprite2D"]
 
 [node name="MarginContiner" type="Sprite2D" parent="Sprite2D/TextBox"]
-position = Vector2(895.938, 138.125)
+position = Vector2(903, 138)
 scale = Vector2(0.604513, 0.78812)
 texture = ExtResource("18_ssvqc")
 
@@ -244,14 +244,34 @@ offset_bottom = -31.084
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 20
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Sprite2D/TextBox/MarginContiner/MarginContainer"]
-custom_minimum_size = Vector2(200, 200)
+[node name="Control" type="Control" parent="Sprite2D/TextBox/MarginContiner/MarginContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Sprite2D/TextBox/MarginContiner/MarginContainer/HBoxContainer"]
+[node name="HBoxContainer" type="BoxContainer" parent="Sprite2D/TextBox/MarginContiner/MarginContainer/Control"]
+clip_contents = true
+custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
-theme_override_font_sizes/font_size = 30
-text = "default text here"
+offset_left = -24.695
+offset_top = 15.9144
+offset_right = 494.305
+offset_bottom = 215.914
+
+[node name="Label" type="RichTextLabel" parent="Sprite2D/TextBox/MarginContiner/MarginContainer/Control/HBoxContainer"]
+clip_children = 2
+clip_contents = false
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/bold_italics_font_size = 0
+theme_override_font_sizes/italics_font_size = 0
+theme_override_font_sizes/mono_font_size = 20
+theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/bold_font_size = 0
+text = "dvdjkfdnvjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj"
+fit_content = true
+autowrap_mode = 2
+horizontal_alignment = 3
 
 [node name="Player" type="Sprite2D" parent="."]
 position = Vector2(399, 367)
