@@ -1,0 +1,106 @@
+[gd_scene load_steps=16 format=3 uid="uid://bqq8bhxsuuhnb"]
+
+[ext_resource type="Texture2D" uid="uid://7u54nm6wjwl8" path="res://assets/images/1.png" id="1_ypn4w"]
+[ext_resource type="Script" uid="uid://csdm5f14jeucw" path="res://scripts/itemDrag.gd" id="2_vc1y7"]
+[ext_resource type="Texture2D" uid="uid://cq3l5wu0kf07a" path="res://assets/images/2.png" id="3_44yx7"]
+[ext_resource type="Texture2D" uid="uid://dis7dd3hkfa7p" path="res://assets/images/3.png" id="4_lbrgs"]
+[ext_resource type="Texture2D" uid="uid://bwd4of002behj" path="res://assets/images/4.png" id="5_kkuia"]
+[ext_resource type="Texture2D" uid="uid://cp0qjar4exm7e" path="res://assets/images/5.png" id="6_36cfx"]
+[ext_resource type="Texture2D" uid="uid://c0ooyn07651ua" path="res://assets/images/6.png" id="7_eh5lm"]
+[ext_resource type="Texture2D" uid="uid://dw6ylo858jhsh" path="res://assets/images/7.png" id="8_4pfwt"]
+[ext_resource type="Texture2D" uid="uid://bu0kpu7fq8qlm" path="res://assets/images/8.png" id="9_pikno"]
+[ext_resource type="Texture2D" uid="uid://bj4ycohuwhb5q" path="res://assets/images/9.png" id="10_0a1bo"]
+[ext_resource type="Texture2D" uid="uid://rehqdwocbkf" path="res://assets/images/10.png" id="11_trrqm"]
+[ext_resource type="Texture2D" uid="uid://kouursu70i44" path="res://assets/images/11.png" id="12_vkd6l"]
+[ext_resource type="Texture2D" uid="uid://ckse7m77tv6qp" path="res://assets/images/12.png" id="13_hee1t"]
+[ext_resource type="Texture2D" uid="uid://5wqifw5b8rk0" path="res://assets/images/13.png" id="14_m44w4"]
+[ext_resource type="Texture2D" uid="uid://cvkw61vqpvd2r" path="res://assets/images/14.png" id="15_mn35f"]
+
+[node name="Level0" type="Node2D"]
+
+[node name="background0" type="Sprite2D" parent="."]
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+offset_left = 19.0
+offset_top = 16.0
+offset_right = 1377.0
+offset_bottom = 321.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+
+[node name="Item1" type="TextureRect" parent="ScrollContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_ypn4w")
+expand_mode = 2
+script = ExtResource("2_vc1y7")
+
+[node name="Item2" type="TextureRect" parent="ScrollContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_44yx7")
+expand_mode = 2
+
+[node name="Item3" type="TextureRect" parent="ScrollContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("4_lbrgs")
+expand_mode = 2
+
+[node name="Item4" type="TextureRect" parent="ScrollContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("5_kkuia")
+expand_mode = 2
+
+[node name="Item5" type="TextureRect" parent="ScrollContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("6_36cfx")
+expand_mode = 2
+script = ExtResource("2_vc1y7")
+
+[node name="Item6" type="TextureRect" parent="ScrollContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("7_eh5lm")
+expand_mode = 2
+
+[node name="Item7" type="TextureRect" parent="ScrollContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("8_4pfwt")
+expand_mode = 2
+
+[node name="Item8" type="TextureRect" parent="ScrollContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("9_pikno")
+expand_mode = 2
+
+[node name="Item9" type="TextureRect" parent="ScrollContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("10_0a1bo")
+expand_mode = 2
+script = ExtResource("2_vc1y7")
+
+[node name="Item10" type="TextureRect" parent="ScrollContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("11_trrqm")
+expand_mode = 2
+
+[node name="Item11" type="TextureRect" parent="ScrollContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("12_vkd6l")
+expand_mode = 2
+
+[node name="Item12" type="TextureRect" parent="ScrollContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("13_hee1t")
+expand_mode = 2
+
+[node name="Item13" type="TextureRect" parent="ScrollContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("14_m44w4")
+expand_mode = 2
+script = ExtResource("2_vc1y7")
+
+[node name="Item14" type="TextureRect" parent="ScrollContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("15_mn35f")
+expand_mode = 2

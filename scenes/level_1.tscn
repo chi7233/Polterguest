@@ -1,8 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://b78v5h2n1wo6a"]
+[gd_scene load_steps=5 format=3 uid="uid://b78v5h2n1wo6a"]
 
-[ext_resource type="Texture2D" uid="uid://5r1obeuep7vt" path="res://background1.png" id="1_3hls8"]
+[ext_resource type="Texture2D" uid="uid://cu7xldcon74vk" path="res://assets/images/background1.png" id="1_3hls8"]
+[ext_resource type="Script" uid="uid://fs3twfeffa63" path="res://scenes/level_1.gd" id="1_rus8k"]
+[ext_resource type="Texture2D" uid="uid://vsy2pop8fgv1" path="res://assets/images/fridge.png" id="2_bswci"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5xbjy"]
+size = Vector2(255.099, 282.409)
 
 [node name="Level1" type="Node2D"]
+script = ExtResource("1_rus8k")
 
 [node name="Background1" type="Sprite2D" parent="."]
 position = Vector2(577, 317.5)
@@ -34,3 +40,17 @@ offset_left = 800.0
 offset_top = 430.0
 offset_right = 840.0
 offset_bottom = 470.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(574.75, 315.5)
+scale = Vector2(0.591927, 0.584259)
+texture = ExtResource("2_bswci")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(115, 388)
+scale = Vector2(0.591927, 0.584259)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(2.53406, 0.855713)
+shape = SubResource("RectangleShape2D_5xbjy")
