@@ -1,12 +1,19 @@
 extends Sprite2D
 
 
+ 
+var another_obj : Resource
+
+
+
+
 var base_pos=300;
 var time_duration = 0.0;
 var items = {}
-var min_distance = 100
+var min_distance = 70
 var text
 var dragged_item 
+var the_spot
 @onready var text_content : Label = $Label
  
 
@@ -24,17 +31,18 @@ class ItemClass :
 	static func create(name: String, placement: String, hint_text: String) -> ItemClass:
 		return ItemClass.new(name, placement, hint_text)	
 		
-	func as_string() -> String:
-		return "[Item Name=%s, Placemente=%s, Hint=%s]" % [Name, Placement, HintText]
+	
 	
 var ListOfItems : Array[ItemClass] = []
 
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+#	another_obj = load("res://check_box.gd").new()
 	var base_pos = self.position.y
 	var item_container = $"../DragLayer/ItemBar/HBoxContainer"
-	text = $"../TextBox"
+	text = $TextBox
 	if (item_container != null):
 		items =  item_container.get_children()
 	else :
@@ -46,9 +54,10 @@ func _ready() -> void:
 		print ("not valid")
 	text.visible = false; 
 	
+	the_spot = $"../script_node_scrore"
+	
 	load_csv_as_array("res://csv/polterguest_items.csv")
-	if (ListOfItems.size() > 0):
-		print(ListOfItems[1].Name)
+	
 	pass # Replace with function body.
 
 
@@ -65,6 +74,7 @@ func _process(delta: float) -> void:
 					if(item.get_child_count() > 0) :
 						var item_name = item.get_node("Label")
 						for x in ListOfItems:
+							print(x.Name)
 							if(item_name.text != x.Name):
 								continue
 							elif item_name.text == x.Name:
@@ -75,22 +85,28 @@ func _process(delta: float) -> void:
 								text.get_node("MarginContiner/MarginContainer/HBoxContainer/Label").text = "pulling my haor out"
 						
 						
-					break  # Stop once the first matching node is found
+					break 
 		
 
 	pass
 
 
+
 func _input(event) -> void:
-		var cases; 
+		
 		var text_content : String = ""
 		if (event.is_action_released("get_hint")) : #and is holding item
 			if text.visible == true :
 				text.visible = false
-			if (items.any(func(x): return x.global_position.distance_to(self.global_position) < min_distance )):
-				text.visible = true
+			if dragged_item:
+				print(dragged_item.get_node("Label").text)
+				for spot in the_spot.spotList:
+					if dragged_item.global_position.distance_to(spot.pos) < min_distance:
+						spot._item_held = dragged_item.get_node("Label").text
+						break
+					
 				
-				
+			
 			
 pass
 
