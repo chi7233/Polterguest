@@ -227,8 +227,8 @@ script = ExtResource("17_ssvqc")
 [node name="TextBox" type="CanvasLayer" parent="Sprite2D"]
 
 [node name="MarginContiner" type="Sprite2D" parent="Sprite2D/TextBox"]
-position = Vector2(903, 138)
-scale = Vector2(0.604513, 0.78812)
+position = Vector2(922.969, 132)
+scale = Vector2(0.573703, 0.78812)
 texture = ExtResource("18_ssvqc")
 
 [node name="MarginContainer" type="MarginContainer" parent="Sprite2D/TextBox/MarginContiner"]
