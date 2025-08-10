@@ -73,7 +73,6 @@ func _process(delta: float) -> void:
 					if(item.get_child_count() > 0) :
 						var item_name = item.get_node("Label")
 						for x in ListOfItems:
-							print(x.Name)
 							if(item_name.text != x.Name):
 								continue
 							elif item_name.text == x.Name:
