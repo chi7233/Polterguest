@@ -78,9 +78,10 @@ func _process(delta: float) -> void:
 							elif item_name.text == x.Name:
 								text.visible = true
 								text.get_node("MarginContiner/MarginContainer/HBoxContainer/Label").text = x.HintText
+								print(x.HintText)
 							else:
 								text.visible = 1; 
-								text.get_node("MarginContiner/MarginContainer/HBoxContainer/Label").text = "pulling my haor out"
+								#text.get_node("MarginContiner/MarginContainer/HBoxContainer/Label").text = "pulling my haor out"
 						
 						
 					break 
