@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://d15xasu6atyf5"]
+[gd_scene load_steps=19 format=3 uid="uid://d15xasu6atyf5"]
 
 [ext_resource type="Texture2D" uid="uid://rqg5scfqvkvv" path="res://assets/images/ItemArea.png" id="1_e2o6t"]
 [ext_resource type="Texture2D" uid="uid://dtvbe8kuex1mq" path="res://assets/images/items/01.png" id="2_rysoc"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://5wqifw5b8rk0" path="res://assets/images/13.png" id="15_suyxu"]
 [ext_resource type="Texture2D" uid="uid://duj3dcleo48n5" path="res://assets/Assets 1/Assets 1/mrghost.png" id="16_rysoc"]
 [ext_resource type="Script" uid="uid://do8wjf3j5n7am" path="res://scripts/josie's scripts/gjost_interact.gd" id="17_ssvqc"]
+[ext_resource type="Texture2D" uid="uid://cg3mnfmr432x" path="res://assets/Assets 1/Assets 1/Grandpa Bubble.png" id="18_ssvqc"]
 
 [node name="Game" type="Node2D"]
 
@@ -146,7 +147,32 @@ expand_mode = 2
 [node name="Level1" parent="." instance=ExtResource("3_feb5d")]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(791.25, 225.812)
+position = Vector2(657, 374)
 scale = Vector2(0.232362, 0.21386)
 texture = ExtResource("16_rysoc")
 script = ExtResource("17_ssvqc")
+
+[node name="TextBox" type="CanvasLayer" parent="."]
+
+[node name="MarginContiner" type="Sprite2D" parent="TextBox"]
+position = Vector2(799, 166)
+scale = Vector2(0.356274, 0.590425)
+texture = ExtResource("18_ssvqc")
+
+[node name="MarginContainer" type="MarginContainer" parent="TextBox/MarginContiner"]
+offset_left = -317.0
+offset_top = -127.0
+offset_right = 373.0
+offset_bottom = 93.0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextBox/MarginContiner/MarginContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TextBox/MarginContiner/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "default text here"
