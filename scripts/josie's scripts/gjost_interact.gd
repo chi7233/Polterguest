@@ -2,7 +2,6 @@ extends Sprite2D
 
 
  
-var another_obj : Resource
 
 
 
@@ -98,12 +97,12 @@ func _input(event) -> void:
 		if (event.is_action_released("get_hint")) : #and is holding item
 			if text.visible == true :
 				text.visible = false
-			if dragged_item:
-				print(dragged_item.get_node("Label").text)
-				for spot in the_spot.spotList:
-					if dragged_item.global_position.distance_to(spot.pos) < min_distance:
-						spot._item_held = dragged_item.get_node("Label").text
-						break
+			#if dragged_item:
+			#	print(dragged_item.get_node("Label").text)
+			#	for spot in the_spot.spotList:
+			#		if dragged_item.global_position.distance_to(spot.pos) < min_distance:
+			#			spot._item_held = dragged_item.get_node("Label").text
+			#			break
 					
 				
 			

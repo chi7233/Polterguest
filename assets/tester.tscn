@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cnl7qf0qg5dw6"]
+
+[ext_resource type="Script" uid="uid://cgjf7paedyc1v" path="res://assets/create_player.gd" id="1_qxhol"]
+
+[node name="Tester" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+script = ExtResource("1_qxhol")

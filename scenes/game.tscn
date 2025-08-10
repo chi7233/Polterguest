@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://d15xasu6atyf5"]
+[gd_scene load_steps=21 format=3 uid="uid://d15xasu6atyf5"]
 
 [ext_resource type="Texture2D" uid="uid://rqg5scfqvkvv" path="res://assets/images/ItemArea.png" id="1_e2o6t"]
 [ext_resource type="Texture2D" uid="uid://dtvbe8kuex1mq" path="res://assets/images/items/01.png" id="2_rysoc"]
@@ -18,6 +18,8 @@
 [ext_resource type="Texture2D" uid="uid://duj3dcleo48n5" path="res://assets/Assets 1/Assets 1/mrghost.png" id="16_rysoc"]
 [ext_resource type="Script" uid="uid://do8wjf3j5n7am" path="res://scripts/josie's scripts/gjost_interact.gd" id="17_ssvqc"]
 [ext_resource type="Texture2D" uid="uid://cg3mnfmr432x" path="res://assets/Assets 1/Assets 1/Grandpa Bubble.png" id="18_ssvqc"]
+[ext_resource type="Texture2D" uid="uid://omkb0wtwl6yx" path="res://assets/Assets 1/Assets 1/Slot 1 Hint.png" id="19_1kice"]
+[ext_resource type="Script" uid="uid://bpld4c3n3e8ad" path="res://scenes/player_characaterization.gd" id="19_264po"]
 
 [node name="Game" type="Node2D"]
 
@@ -247,3 +249,9 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
 text = "default text here"
 autowrap_mode = 2
+
+[node name="Player" type="Sprite2D" parent="."]
+position = Vector2(399, 367)
+scale = Vector2(0.132214, 1.31116)
+texture = ExtResource("19_1kice")
+script = ExtResource("19_264po")

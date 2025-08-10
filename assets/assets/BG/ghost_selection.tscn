@@ -1,0 +1,88 @@
+[gd_scene load_steps=11 format=3 uid="uid://blrew6qrgvlqk"]
+
+[ext_resource type="Script" uid="uid://dt0le5ik3sst8" path="res://assets/assets/BG/CharSelection.gd" id="1_s3tfi"]
+[ext_resource type="Texture2D" uid="uid://bpy6stirqtli8" path="res://assets/assets/BG/Ghost Select.png" id="2_mcfeu"]
+[ext_resource type="Texture2D" uid="uid://bov415ei4bhns" path="res://assets/assets/Buttons/Continue.png" id="3_hjvxr"]
+[ext_resource type="Texture2D" uid="uid://cgealtytohwhm" path="res://assets/assets/Buttons/[Continue] Hover-Selected.png" id="4_y2bpl"]
+[ext_resource type="Texture2D" uid="uid://bgunkdwmsc4fi" path="res://assets/assets/Portraits/[Left Ghost Portrait].png" id="5_jfitt"]
+[ext_resource type="Texture2D" uid="uid://ca7x86l87ip17" path="res://assets/assets/Portraits/[Left Ghost Portrait] Selected.png" id="6_wtwta"]
+[ext_resource type="Texture2D" uid="uid://ibcs6s2eet0e" path="res://assets/assets/Portraits/[Middle Ghost Portrait].png" id="7_ygbv3"]
+[ext_resource type="Texture2D" uid="uid://cficyfpaf23st" path="res://assets/assets/Portraits/[Middle Ghost Portrait] Selected.png" id="8_htwlx"]
+[ext_resource type="Texture2D" uid="uid://c7ql0pte0lja3" path="res://assets/assets/Portraits/[Right Ghost Portrait].png" id="9_px0ml"]
+[ext_resource type="Texture2D" uid="uid://b5wxqn7dpwdmv" path="res://assets/assets/Portraits/[Right Ghost Portrait] Selected.png" id="10_5m0iw"]
+
+[node name="Ghost Selection" type="Node2D"]
+script = ExtResource("1_s3tfi")
+
+[node name="ItemList" type="ItemList" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 188.0
+offset_top = 159.0
+offset_right = 1005.0
+offset_bottom = 462.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+item_count = 1
+max_columns = 3
+
+[node name="BoxContainer" type="BoxContainer" parent="."]
+offset_right = 1152.0
+offset_bottom = 650.0
+
+[node name="TextureRect" type="TextureRect" parent="BoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_mcfeu")
+expand_mode = 3
+
+[node name="Continue Button" type="TextureButton" parent="."]
+offset_left = 331.0
+offset_top = 522.0
+offset_right = 825.0
+offset_bottom = 644.0
+size_flags_vertical = 8
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("3_hjvxr")
+texture_pressed = ExtResource("4_y2bpl")
+texture_hover = ExtResource("4_y2bpl")
+
+[node name="Ghost Select" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 35.0
+offset_top = 96.0
+offset_right = 1122.0
+offset_bottom = 568.0
+
+[node name="choices" type="HBoxContainer" parent="Ghost Select"]
+offset_top = -44.0
+offset_right = 1082.0
+offset_bottom = 450.0
+alignment = 1
+
+[node name="Left Portrait" type="TextureButton" parent="Ghost Select/choices"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("5_jfitt")
+texture_pressed = ExtResource("6_wtwta")
+texture_hover = ExtResource("6_wtwta")
+
+[node name="Middle Portrait" type="TextureButton" parent="Ghost Select/choices"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("7_ygbv3")
+texture_pressed = ExtResource("8_htwlx")
+texture_hover = ExtResource("8_htwlx")
+
+[node name="Right Portrait" type="TextureButton" parent="Ghost Select/choices"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("9_px0ml")
+texture_pressed = ExtResource("10_5m0iw")
+texture_hover = ExtResource("10_5m0iw")
