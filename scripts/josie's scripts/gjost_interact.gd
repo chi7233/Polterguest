@@ -6,7 +6,7 @@ var time_duration = 0.0;
 var items = {}
 var min_distance = 100
 var text
-var itemList : Array
+var itemList : Array = []
 
 
 func create_textbox()->void:
