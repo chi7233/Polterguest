@@ -70,6 +70,6 @@ func load_csv_as_array(csv_path :String) -> Array:
 	while (!file.eof_reached()) :
 		item_hints.append( file.get_line().split(","))
 		
-		file.close()
+	file.close()
 	
 	return item_hints
