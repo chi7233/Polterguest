@@ -55,12 +55,6 @@ texture = ExtResource("2_rysoc")
 expand_mode = 2
 script = ExtResource("3_ssvqc")
 
-[node name="Label" type="Label" parent="DragLayer/ItemBar/HBoxContainer/Item1"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-text = "Bread-shaped Box"
-
 [node name="Item2" type="TextureRect" parent="DragLayer/ItemBar/HBoxContainer"]
 z_index = 5
 layout_mode = 2
