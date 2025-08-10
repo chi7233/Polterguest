@@ -32,7 +32,8 @@ func _ready() -> void:
 	text.visible = false; 
 	
 	itemList = load_csv_as_array("res://csv/polterguest_items.csv")
-	print(itemList)
+	if (itemList.size() > 0):
+		print(itemList)
 	pass # Replace with function body.
 
 
