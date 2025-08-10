@@ -1,0 +1,214 @@
+[gd_scene load_steps=16 format=3 uid="uid://c82fxyug6cmgs"]
+
+[ext_resource type="PackedScene" uid="uid://d15xasu6atyf5" path="res://scenes/game.tscn" id="1_x0ks3"]
+[ext_resource type="Texture2D" uid="uid://rqg5scfqvkvv" path="res://assets/images/ItemArea.png" id="2_w7t3l"]
+[ext_resource type="Texture2D" uid="uid://dtvbe8kuex1mq" path="res://assets/images/items/01.png" id="3_tyltc"]
+[ext_resource type="Script" uid="uid://jqnxguvuk0ub" path="res://scripts/itemDragFixPosition.gd" id="4_l0q8t"]
+[ext_resource type="Texture2D" uid="uid://c5ysybjj07wlf" path="res://assets/images/items/02.png" id="5_fuoxj"]
+[ext_resource type="Texture2D" uid="uid://dlncdav35wm72" path="res://assets/images/items/03.png" id="6_b0vy7"]
+[ext_resource type="Texture2D" uid="uid://drtqel83dl3yt" path="res://assets/images/items/04.png" id="7_vj0ri"]
+[ext_resource type="Texture2D" uid="uid://cssd2c28aeekw" path="res://assets/images/items/05.png" id="8_sr061"]
+[ext_resource type="Texture2D" uid="uid://bun56umrr15t8" path="res://assets/images/items/06.png" id="9_erprw"]
+[ext_resource type="Texture2D" uid="uid://b54eq3hxak1cq" path="res://assets/images/items/07.png" id="10_gfhsl"]
+[ext_resource type="Texture2D" uid="uid://cmpa63ym43dia" path="res://assets/images/items/08.png" id="11_fvduh"]
+[ext_resource type="Texture2D" uid="uid://c77tkj3mvlali" path="res://assets/images/items/09.png" id="12_xem36"]
+[ext_resource type="Texture2D" uid="uid://dmrs8pw07pfl8" path="res://assets/images/items/10.png" id="13_8ea5g"]
+[ext_resource type="Texture2D" uid="uid://kouursu70i44" path="res://assets/images/11.png" id="14_ri067"]
+[ext_resource type="Texture2D" uid="uid://5wqifw5b8rk0" path="res://assets/images/13.png" id="15_p3ems"]
+
+[node name="Back-up-scene" type="Node2D"]
+
+[node name="Game" parent="." instance=ExtResource("1_x0ks3")]
+
+[node name="DragLayer2" type="CanvasLayer" parent="Game"]
+
+[node name="ItemBar" type="Control" parent="Game/DragLayer2"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 3.0
+offset_top = 500.0
+offset_right = 1147.0
+offset_bottom = 632.0
+
+[node name="TextureRect" type="TextureRect" parent="Game/DragLayer2/ItemBar"]
+z_index = 3
+layout_mode = 0
+offset_right = 1148.0
+offset_bottom = 142.0
+texture = ExtResource("2_w7t3l")
+expand_mode = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Game/DragLayer2/ItemBar"]
+layout_mode = 2
+offset_left = 130.0
+offset_top = 34.0
+offset_right = 1020.0
+offset_bottom = 105.0
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+
+[node name="Item1" type="TextureRect" parent="Game/DragLayer2/ItemBar/HBoxContainer"]
+z_index = 5
+layout_mode = 2
+texture = ExtResource("3_tyltc")
+expand_mode = 2
+script = ExtResource("4_l0q8t")
+
+[node name="Label" type="Label" parent="Game/DragLayer2/ItemBar/HBoxContainer/Item1"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Print of oat milk carton"
+
+[node name="Item2" type="TextureRect" parent="Game/DragLayer2/ItemBar/HBoxContainer"]
+z_index = 5
+layout_mode = 2
+texture = ExtResource("5_fuoxj")
+expand_mode = 2
+script = ExtResource("4_l0q8t")
+
+[node name="Label" type="Label" parent="Game/DragLayer2/ItemBar/HBoxContainer/Item2"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Balloon animal pot"
+
+[node name="Item3" type="TextureRect" parent="Game/DragLayer2/ItemBar/HBoxContainer"]
+z_index = 5
+layout_mode = 2
+texture = ExtResource("6_b0vy7")
+expand_mode = 2
+script = ExtResource("4_l0q8t")
+
+[node name="Label" type="Label" parent="Game/DragLayer2/ItemBar/HBoxContainer/Item3"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Old cup"
+
+[node name="Item4" type="TextureRect" parent="Game/DragLayer2/ItemBar/HBoxContainer"]
+z_index = 5
+layout_mode = 2
+texture = ExtResource("7_vj0ri")
+expand_mode = 2
+script = ExtResource("4_l0q8t")
+
+[node name="Label" type="Label" parent="Game/DragLayer2/ItemBar/HBoxContainer/Item4"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Rabbit lantern"
+
+[node name="Item5" type="TextureRect" parent="Game/DragLayer2/ItemBar/HBoxContainer"]
+z_index = 5
+layout_mode = 2
+texture = ExtResource("8_sr061")
+expand_mode = 2
+script = ExtResource("4_l0q8t")
+
+[node name="Label" type="Label" parent="Game/DragLayer2/ItemBar/HBoxContainer/Item5"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Hotdog toaster"
+
+[node name="Item6" type="TextureRect" parent="Game/DragLayer2/ItemBar/HBoxContainer"]
+z_index = 5
+layout_mode = 2
+texture = ExtResource("9_erprw")
+expand_mode = 2
+script = ExtResource("4_l0q8t")
+
+[node name="Label" type="Label" parent="Game/DragLayer2/ItemBar/HBoxContainer/Item6"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Zombie plush"
+
+[node name="Item7" type="TextureRect" parent="Game/DragLayer2/ItemBar/HBoxContainer"]
+z_index = 5
+layout_mode = 2
+texture = ExtResource("10_gfhsl")
+expand_mode = 2
+script = ExtResource("4_l0q8t")
+
+[node name="Label" type="Label" parent="Game/DragLayer2/ItemBar/HBoxContainer/Item7"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Bread-shaped box"
+
+[node name="Item8" type="TextureRect" parent="Game/DragLayer2/ItemBar/HBoxContainer"]
+z_index = 5
+layout_mode = 2
+texture = ExtResource("11_fvduh")
+expand_mode = 2
+script = ExtResource("4_l0q8t")
+
+[node name="Label" type="Label" parent="Game/DragLayer2/ItemBar/HBoxContainer/Item8"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Singing fish"
+
+[node name="Item9" type="TextureRect" parent="Game/DragLayer2/ItemBar/HBoxContainer"]
+z_index = 5
+layout_mode = 2
+texture = ExtResource("12_xem36")
+expand_mode = 2
+script = ExtResource("4_l0q8t")
+
+[node name="Label" type="Label" parent="Game/DragLayer2/ItemBar/HBoxContainer/Item9"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Swan pot"
+
+[node name="Item10" type="TextureRect" parent="Game/DragLayer2/ItemBar/HBoxContainer"]
+z_index = 5
+layout_mode = 2
+texture = ExtResource("13_8ea5g")
+expand_mode = 2
+script = ExtResource("4_l0q8t")
+
+[node name="Label" type="Label" parent="Game/DragLayer2/ItemBar/HBoxContainer/Item10"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Shoe paper weight"
+
+[node name="Item11" type="TextureRect" parent="Game/DragLayer2/ItemBar/HBoxContainer"]
+visible = false
+z_index = 5
+layout_mode = 2
+texture = ExtResource("14_ri067")
+expand_mode = 2
+
+[node name="Item12" type="TextureRect" parent="Game/DragLayer2/ItemBar/HBoxContainer"]
+visible = false
+z_index = 5
+layout_mode = 2
+expand_mode = 2
+
+[node name="Item13" type="TextureRect" parent="Game/DragLayer2/ItemBar/HBoxContainer"]
+visible = false
+z_index = 5
+layout_mode = 2
+texture = ExtResource("15_p3ems")
+expand_mode = 2
+
+[node name="Item14" type="TextureRect" parent="Game/DragLayer2/ItemBar/HBoxContainer"]
+visible = false
+z_index = 5
+layout_mode = 2
+expand_mode = 2
