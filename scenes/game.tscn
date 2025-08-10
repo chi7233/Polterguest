@@ -1,66 +1,20 @@
-[gd_scene load_steps=8 format=3 uid="uid://d15xasu6atyf5"]
 
-[ext_resource type="Texture2D" uid="uid://1b8rcngpg72g" path="res://assets/images/ItemArea.png" id="1_e2o6t"]
-[ext_resource type="Texture2D" uid="uid://04uf47ubqfuj" path="res://assets/images/item.png" id="2_feb5d"]
-[ext_resource type="Script" uid="uid://csdm5f14jeucw" path="res://scripts/itemDrag.gd" id="3_fc0e3"]
+[gd_scene load_steps=18 format=3 uid="uid://d15xasu6atyf5"]
+
+[ext_resource type="Texture2D" uid="uid://rqg5scfqvkvv" path="res://assets/images/itemArea.png" id="1_e2o6t"]
+[ext_resource type="Texture2D" uid="uid://dtvbe8kuex1mq" path="res://assets/images/items/01.png" id="2_rysoc"]
 [ext_resource type="PackedScene" uid="uid://b78v5h2n1wo6a" path="res://scenes/level_1.tscn" id="3_feb5d"]
-[ext_resource type="Texture2D" uid="uid://b236gxjmjx2uq" path="res://assets/josies_temp_assets/temp_ghost.jpg" id="5_p57ef"]
-[ext_resource type="Script" uid="uid://mgx5ewiksgnb" path="res://scenes/ghost.gd" id="6_u5sy4"]
-[ext_resource type="PackedScene" uid="uid://x4fc3pt7j8qy" path="res://textbox.tscn" id="7_u5sy4"]
-
-[node name="Game" type="Node2D"]
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="ItemArea" type="Control" parent="CanvasLayer"]
-layout_mode = 3
-anchors_preset = 0
-offset_left = 3.0
-offset_top = 500.0
-offset_right = 1147.0
-offset_bottom = 632.0
-
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/ItemArea"]
-layout_mode = 0
-offset_right = 1148.0
-offset_bottom = 142.0
-texture = ExtResource("1_e2o6t")
-expand_mode = 1
-
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/ItemArea"]
-layout_mode = 0
-offset_left = 358.0
-offset_top = 41.0
-offset_right = 1095.0
-offset_bottom = 122.0
-
-[node name="Item1" type="TextureRect" parent="CanvasLayer/ItemArea/HBoxContainer"]
-layout_mode = 2
-texture = ExtResource("2_feb5d")
-expand_mode = 2
-script = ExtResource("3_fc0e3")
-
-[node name="Item2" type="TextureRect" parent="CanvasLayer/ItemArea/HBoxContainer"]
-layout_mode = 2
-texture = ExtResource("2_feb5d")
-expand_mode = 2
-
-[node name="Item3" type="TextureRect" parent="CanvasLayer/ItemArea/HBoxContainer"]
-layout_mode = 2
-texture = ExtResource("2_feb5d")
-expand_mode = 2
-
-[node name="Item4" type="TextureRect" parent="CanvasLayer/ItemArea/HBoxContainer"]
-layout_mode = 2
-texture = ExtResource("2_feb5d")
-expand_mode = 2
-
-[node name="Level1" parent="." instance=ExtResource("3_feb5d")]
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(580.75, 335.25)
-scale = Vector2(0.289167, 0.3075)
-texture = ExtResource("5_p57ef")
-script = ExtResource("6_u5sy4")
-
-[node name="TextBox" parent="." instance=ExtResource("7_u5sy4")]
+[ext_resource type="Script" uid="uid://jqnxguvuk0ub" path="res://scripts/itemDragFixPosition.gd" id="3_ssvqc"]
+[ext_resource type="Texture2D" uid="uid://c5ysybjj07wlf" path="res://assets/images/items/02.png" id="4_ssvqc"]
+[ext_resource type="Texture2D" uid="uid://dlncdav35wm72" path="res://assets/images/items/03.png" id="5_264po"]
+[ext_resource type="Texture2D" uid="uid://drtqel83dl3yt" path="res://assets/images/items/04.png" id="6_1kice"]
+[ext_resource type="Texture2D" uid="uid://cssd2c28aeekw" path="res://assets/images/items/05.png" id="7_5newe"]
+[ext_resource type="Texture2D" uid="uid://bun56umrr15t8" path="res://assets/images/items/06.png" id="8_37s47"]
+[ext_resource type="Texture2D" uid="uid://b54eq3hxak1cq" path="res://assets/images/items/07.png" id="9_bt5mj"]
+[ext_resource type="Texture2D" uid="uid://cmpa63ym43dia" path="res://assets/images/items/08.png" id="10_e1j6l"]
+[ext_resource type="Texture2D" uid="uid://c77tkj3mvlali" path="res://assets/images/items/09.png" id="11_pl11u"]
+[ext_resource type="Texture2D" uid="uid://dmrs8pw07pfl8" path="res://assets/images/items/10.png" id="12_bhx41"]
+[ext_resource type="Texture2D" uid="uid://kouursu70i44" path="res://assets/images/11.png" id="13_qnb83"]
+[ext_resource type="Texture2D" uid="uid://ckse7m77tv6qp" path="res://assets/images/12.png" id="14_sww3w"]
+[ext_resource type="Texture2D" uid="uid://5wqifw5b8rk0" path="res://assets/images/13.png" id="15_suyxu"]
+[ext_resource type="Texture2D" uid="uid://cvkw61vqpvd2r" path="res://assets/images/14.png" id="16_sgl2t"]

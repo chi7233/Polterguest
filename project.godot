@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Polterguest"
-run/main_scene="uid://d15xasu6atyf5"
+run/main_scene="uid://dkxcypdh8rf0x"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
