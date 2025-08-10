@@ -35,12 +35,13 @@ color = Color(0, 0, 0, 0.882353)
 [node name="Spot2" type="Control" parent="Spots1" groups=["spots"]]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 538.0
-offset_top = 200.0
-offset_right = 578.0
-offset_bottom = 240.0
+offset_left = 265.0
+offset_top = 366.0
+offset_right = 305.0
+offset_bottom = 406.0
 
 [node name="HintOverlay" type="ColorRect" parent="Spots1/Spot2"]
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 color = Color(0, 0, 0, 0.882353)
@@ -48,12 +49,13 @@ color = Color(0, 0, 0, 0.882353)
 [node name="Spot3" type="Control" parent="Spots1" groups=["spots"]]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 844.0
-offset_top = 228.0
-offset_right = 884.0
-offset_bottom = 268.0
+offset_left = 472.0
+offset_top = 144.0
+offset_right = 512.0
+offset_bottom = 184.0
 
 [node name="HintOverlay" type="ColorRect" parent="Spots1/Spot3"]
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 color = Color(0, 0, 0, 0.882353)
@@ -61,10 +63,10 @@ color = Color(0, 0, 0, 0.882353)
 [node name="Spot4" type="Control" parent="Spots1" groups=["spots"]]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 265.0
-offset_top = 366.0
-offset_right = 305.0
-offset_bottom = 406.0
+offset_left = 562.0
+offset_top = 144.0
+offset_right = 602.0
+offset_bottom = 184.0
 
 [node name="HintOverlay" type="ColorRect" parent="Spots1/Spot4"]
 layout_mode = 0
@@ -75,12 +77,13 @@ color = Color(0, 0, 0, 0.882353)
 [node name="Spot5" type="Control" parent="Spots1" groups=["spots"]]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 489.0
-offset_top = 200.0
-offset_right = 529.0
-offset_bottom = 240.0
+offset_left = 439.0
+offset_top = 198.0
+offset_right = 479.0
+offset_bottom = 238.0
 
 [node name="HintOverlay" type="ColorRect" parent="Spots1/Spot5"]
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 color = Color(0, 0, 0, 0.882353)
@@ -88,12 +91,13 @@ color = Color(0, 0, 0, 0.882353)
 [node name="Spot6" type="Control" parent="Spots1" groups=["spots"]]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 964.0
-offset_top = 288.0
-offset_right = 1004.0
-offset_bottom = 328.0
+offset_left = 489.0
+offset_top = 200.0
+offset_right = 529.0
+offset_bottom = 240.0
 
 [node name="HintOverlay" type="ColorRect" parent="Spots1/Spot6"]
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 color = Color(0, 0, 0, 0.882353)
@@ -101,10 +105,10 @@ color = Color(0, 0, 0, 0.882353)
 [node name="Spot7" type="Control" parent="Spots1" groups=["spots"]]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 439.0
-offset_top = 198.0
-offset_right = 479.0
-offset_bottom = 238.0
+offset_left = 538.0
+offset_top = 200.0
+offset_right = 578.0
+offset_bottom = 240.0
 
 [node name="HintOverlay" type="ColorRect" parent="Spots1/Spot7"]
 layout_mode = 0
@@ -115,12 +119,13 @@ color = Color(0, 0, 0, 0.882353)
 [node name="Spot8" type="Control" parent="Spots1" groups=["spots"]]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 472.0
-offset_top = 144.0
-offset_right = 512.0
-offset_bottom = 184.0
+offset_left = 734.0
+offset_top = 249.0
+offset_right = 774.0
+offset_bottom = 289.0
 
 [node name="HintOverlay" type="ColorRect" parent="Spots1/Spot8"]
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 color = Color(0, 0, 0, 0.882353)
@@ -128,12 +133,13 @@ color = Color(0, 0, 0, 0.882353)
 [node name="Spot9" type="Control" parent="Spots1" groups=["spots"]]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 562.0
-offset_top = 144.0
-offset_right = 602.0
-offset_bottom = 184.0
+offset_left = 844.0
+offset_top = 228.0
+offset_right = 884.0
+offset_bottom = 268.0
 
 [node name="HintOverlay" type="ColorRect" parent="Spots1/Spot9"]
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 color = Color(0, 0, 0, 0.882353)
@@ -141,10 +147,10 @@ color = Color(0, 0, 0, 0.882353)
 [node name="Spot10" type="Control" parent="Spots1" groups=["spots"]]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 734.0
-offset_top = 249.0
-offset_right = 774.0
-offset_bottom = 289.0
+offset_left = 964.0
+offset_top = 288.0
+offset_right = 1004.0
+offset_bottom = 328.0
 
 [node name="HintOverlay" type="ColorRect" parent="Spots1/Spot10"]
 layout_mode = 0
