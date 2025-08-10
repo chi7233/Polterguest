@@ -48,7 +48,7 @@ func _ready() -> void:
 	
 	load_csv_as_array("res://csv/polterguest_items.csv")
 	if (ListOfItems.size() > 0):
-		print(ListOfItems)
+		print(ListOfItems[1].Name)
 	pass # Replace with function body.
 
 
@@ -56,42 +56,26 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	time_duration += delta
 	self.position.y = base_pos + sin(time_duration * 5) * 30
-	while (items.any(func(x): return x.global_position.distance_to(self.global_position) < min_distance )):
-		dragged_item = items.find(func(x): 
-				match x.name:
-					"Item1":
-						return x
-					"Item3":
-						return x
-					"Item4":
-						return x
-					"Item5":
-						return x
-					"Item6":
-						return x
-					"Item7":
-						return x
-					"Item8":
-						return x
-					"Item9":
-						return x
-					"Item10":
-						return x
-					"Item11":
-						return x
-					"Item12":
-						return x
-					"Item13":
-						return x
-					"Item14":
-						print("c")
-					_:
-						return null
-				)
 
-	if(dragged_item):
-		print(dragged_item.name)
-		
+	for item in items:
+		if item.global_position.distance_to(self.global_position) < min_distance:
+			match item.name:
+				"Item1", "Item2", "Item3", "Item4", "Item5", "Item6", "Item7", "Item8", "Item9", "Item10", "Item11", "Item12", "Item13", "Item14":
+					dragged_item = item
+					if(item.get_child_count() > 0) :
+						var item_name = item.get_node("Label")
+						for x in ListOfItems:
+							if(item_name.text != x.Name):
+								continue
+							elif item_name.text == x.Name:
+								text.visible = true
+								text.get_node("MarginContiner/MarginContainer/HBoxContainer/Label").text = x.HintText
+							else:
+								text.visible = 1; 
+								text.get_node("MarginContiner/MarginContainer/HBoxContainer/Label").text = "pulling my haor out"
+						
+						
+					break  # Stop once the first matching node is found
 		
 
 	pass
