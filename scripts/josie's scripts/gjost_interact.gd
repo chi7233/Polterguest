@@ -123,7 +123,7 @@ func load_csv_as_array(csv_path :String) -> void:
 		if line == "":
 			continue  # skip blank lines
 		var columns = line.split(",")
-
+	
 		if columns.size() >= 3:
 			var id = columns[0]
 			var name = columns[1]
@@ -134,8 +134,5 @@ func load_csv_as_array(csv_path :String) -> void:
 			ListOfItems.append(ItemClass.new())
 	
 	
-	
-	
-		
 	file.close()
 	pass
