@@ -37,3 +37,40 @@ func check_drop():
 
 	# 没放到spot，恢复原位
 	position = original_position
+	
+	
+func returnPath(x) ->String:
+	
+	match x:
+		"Item1":
+			return "res://assets/hints/Hint_1_oat_milk.png"
+		"Item2":
+			return "res://assets/hints/hint_2_animal_balloon.png"
+		"Item3":
+			return "res://assets/hints/Hint_3_goblet.png"
+		"Item4":
+			return "res://assets/hints/Hint_4_rabbit_lamp.png"
+		"Item5":
+			return "res://assets/hints/Hint_5_hotdog.png"
+		"Item6":
+			return "res://assets/hints/Hint_6_zombie.png"
+		"Item7":
+			return "res://assets/hints/Hint_7_bread.png"
+		"Item8":
+			return "res://assets/hints/hint_8_fish.png"
+		"Item9":
+			return "res://assets/hints/hint_9_swan.png"
+		"Item10":	
+			return "res://assets/hints/Hint_10_shoe.png"
+	return x
+
+func _on_mouse_entered() -> void:
+	$"../../../../../Sprite2D/TextBox".visible = true
+	$"../../../../../Sprite2D/TextBox/MarginContainer2".texture = load(returnPath(self.name))
+	print(self.name)
+pass # Replace with function body.
+
+
+func _on_mouse_exited() -> void:
+	$"../../../../../Sprite2D/TextBox".visible = false
+	pass # Replace with function body.

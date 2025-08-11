@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://b78v5h2n1wo6a"]
 
 [ext_resource type="Texture2D" uid="uid://cu7xldcon74vk" path="res://assets/images/background1.png" id="1_3hls8"]
-[ext_resource type="Script" uid="uid://fs3twfeffa63" path="res://scenes/level_1.gd" id="1_rus8k"]
+[ext_resource type="Script" uid="uid://fs3twfeffa63" path="res://from_josie's_branch/scenes/level_1.gd" id="1_rus8k"]
 [ext_resource type="Texture2D" uid="uid://vsy2pop8fgv1" path="res://assets/images/fridge.png" id="2_bswci"]
 [ext_resource type="AudioStream" uid="uid://bpr76i1nanqx3" path="res://assets/sounds/GAMEPLAYLOOP.wav" id="4_5xbjy"]
 

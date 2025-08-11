@@ -40,7 +40,7 @@ var ListOfItems : Array[ItemClass] = []
 func _ready() -> void:
 #	another_obj = load("res://check_box.gd").new()
 	var base_pos = self.position.y
-	var item_container = $"../DragLayer/ItemBar/HBoxContainer"
+	var item_container = $"../CanvasLayer/ItemBar/TextureRect"
 	text = $TextBox
 	if (item_container != null):
 		items =  item_container.get_children()
@@ -64,20 +64,26 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	time_duration += delta
 	self.position.y = base_pos + sin(time_duration * 5) * 30
+	
+	if(!items || items.size() == 0):
+		print(":sob:")
 
 	for item in items:
+	
 		if item.global_position.distance_to(self.global_position) < min_distance:
 			match item.name:
-				"Item1", "Item2", "Item3", "Item4", "Item5", "Item6", "Item7", "Item8", "Item9", "Item10", "Item11", "Item12", "Item13", "Item14":
+				"HBoxContainer1", "HBoxContainer2", "HBoxContainer3", "HBoxContainer4", "HBoxContainer5", "HBoxContainer6", "HBoxContainer7", "HBoxContainer8", "HBoxContainer9", "HBoxContainer10", "HBoxContainer11", "HBoxContainer12", "HBoxContainer13", "HBoxContainer14":
 					dragged_item = item
+					print(dragged_item)
 					if(item.get_child_count() > 0) :
-						var item_name = item.get_node("Label")
+						print("uyes")
+						var item_name = item.get_node("Item/Label")
 						for x in ListOfItems:
 							if(item_name.text != x.Name):
 								continue
 							elif item_name.text == x.Name:
 								text.visible = true
-								text.get_node("MarginContiner/MarginContainer/Control/HBoxContainer/Label").text = x.HintText
+								text.get_node("MarginContainer/MarginContainer/Control/HBoxContainer/Label").text = x.HintText
 							else:
 								text.visible = 1; 
 								#text.get_node("MarginContiner/MarginContainer/HBoxContainer/Label").text = "pulling my haor out"
